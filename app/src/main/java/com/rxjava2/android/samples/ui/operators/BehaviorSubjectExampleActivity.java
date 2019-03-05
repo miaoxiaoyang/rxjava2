@@ -16,6 +16,8 @@ import io.reactivex.subjects.BehaviorSubject;
 
 /**
  * Created by amitshekhar on 17/12/16.
+ * BehaviorSubject
+ * 具体没想到此场景
  */
 
 public class BehaviorSubjectExampleActivity extends AppCompatActivity {

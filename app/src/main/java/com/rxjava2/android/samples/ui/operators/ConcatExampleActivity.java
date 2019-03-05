@@ -16,6 +16,11 @@ import io.reactivex.disposables.Disposable;
 
 /**
  * Created by amitshekhar on 27/08/16.
+ * 操作符
+ *
+ * concat 把两个数组以字符串的方式联系起来
+ *
+ *
  */
 public class ConcatExampleActivity extends AppCompatActivity {
 
@@ -53,10 +58,48 @@ public class ConcatExampleActivity extends AppCompatActivity {
         final Observable<String> aObservable = Observable.fromArray(aStrings);
         final Observable<String> bObservable = Observable.fromArray(bStrings);
 
-        Observable.concat(aObservable, bObservable)
-                .subscribe(getObserver());
+        final String[] cStrings={"C1","c2","c3","c4"};
+        final String[] dStrings={"d1","d2","d3","d4"};
+
+        final Observable<String> cObservable= Observable.fromArray(cStrings);
+        final Observable<String> dObservable= Observable.fromArray(dStrings);
+
+        Observable.concat(cObservable,dObservable).subscribe(getObserver1());
+
+        /**
+         * 将数组转换成string，然后去显示
+         * concat 将两个string 字符串合并到一起
+         */
+//        Observable.concat(aObservable, bObservable)
+//                .subscribe(getObserver());
     }
 
+    private Observer<String> getObserver1(){
+        return new Observer<String>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+                Log.i("onSubscribe  ",d.isDisposed()+"");
+            }
+
+            @Override
+            public void onNext(String s) {
+                textView.append(s);
+                textView.append(AppConstant.LINE_SEPARATOR);
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                textView.append(e.toString());
+                textView.append(AppConstant.LINE_SEPARATOR);
+            }
+
+            @Override
+            public void onComplete() {
+                Log.i("onComplete","");
+            }
+        };
+    }
 
     private Observer<String> getObserver() {
         return new Observer<String>() {

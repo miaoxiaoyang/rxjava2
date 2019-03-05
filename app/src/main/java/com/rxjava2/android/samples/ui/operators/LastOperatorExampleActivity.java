@@ -17,9 +17,14 @@ import io.reactivex.disposables.Disposable;
 
 /**
  * Created by techteam on 13/09/16.
+ * last
  */
 public class LastOperatorExampleActivity extends AppCompatActivity {
 
+    /**
+     * 定位最后一个操作符
+     * last : last 定位最后一个last A1
+     */
     private static final String TAG = DistinctExampleActivity.class.getSimpleName();
     Button btn;
     TextView textView;
@@ -44,12 +49,12 @@ public class LastOperatorExampleActivity extends AppCompatActivity {
     * last() emits only the last item emitted by the Observable.
     */
     private void doSomeWork() {
-        getObservable().last("A1") // the default item ("A1") to emit if the source ObservableSource is empty
+        getObservable().last("A6") // the default item ("A1") to emit if the source ObservableSource is empty
                 .subscribe(getObserver());
     }
 
     private Observable<String> getObservable() {
-        return Observable.just("A1", "A2", "A3", "A4", "A5", "A6");
+        return Observable.just("A1", "A2", "A3", "A4", "A6", "A5");
     }
 
     private SingleObserver<String> getObserver() {

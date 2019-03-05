@@ -17,6 +17,8 @@ import io.reactivex.disposables.Disposable;
 
 /**
  * Created by techteam on 13/09/16.
+ * just
+ * distinct 去重
  */
 public class DistinctExampleActivity extends AppCompatActivity {
 
@@ -49,8 +51,8 @@ public class DistinctExampleActivity extends AppCompatActivity {
                 .subscribe(getObserver());
     }
 
-    private Observable<Integer> getObservable() {
-        return Observable.just(1, 2, 1, 1, 2, 3, 4, 6, 4);
+    private Observable<Integer> getObservable() {//去重
+        return Observable.just(1, 3, 1, 1, 2, 3, 4, 6, 55,55);
     }
 
 

@@ -17,6 +17,10 @@ import io.reactivex.disposables.Disposable;
 
 /**
  * Created by amitshekhar on 30/08/16.
+ *
+ * defer 操作符
+ *
+ *
  */
 public class DeferExampleActivity extends AppCompatActivity {
 

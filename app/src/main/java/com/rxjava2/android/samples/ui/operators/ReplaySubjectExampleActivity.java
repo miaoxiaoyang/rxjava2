@@ -16,6 +16,8 @@ import io.reactivex.subjects.ReplaySubject;
 
 /**
  * Created by amitshekhar on 17/12/16.
+ *
+ * ReplaySubject 不常用
  */
 
 public class ReplaySubjectExampleActivity extends AppCompatActivity {
@@ -44,7 +46,7 @@ public class ReplaySubjectExampleActivity extends AppCompatActivity {
      */
     private void doSomeWork() {
 
-        ReplaySubject<Integer> source = ReplaySubject.create();
+        ReplaySubject<Integer> source = ReplaySubject.create();//source
 
         source.subscribe(getFirstObserver()); // it will get 1, 2, 3, 4
 
@@ -72,7 +74,7 @@ public class ReplaySubjectExampleActivity extends AppCompatActivity {
 
             @Override
             public void onNext(Integer value) {
-                textView.append(" First onNext : value : " + value);
+                textView.append(" First onNext : value ---- : " + value);
                 textView.append(AppConstant.LINE_SEPARATOR);
                 Log.d(TAG, " First onNext value : " + value);
             }
@@ -105,7 +107,7 @@ public class ReplaySubjectExampleActivity extends AppCompatActivity {
 
             @Override
             public void onNext(Integer value) {
-                textView.append(" Second onNext : value : " + value);
+                textView.append(" Second onNext : value ------  : " + value);
                 textView.append(AppConstant.LINE_SEPARATOR);
                 Log.d(TAG, " Second onNext value : " + value);
             }

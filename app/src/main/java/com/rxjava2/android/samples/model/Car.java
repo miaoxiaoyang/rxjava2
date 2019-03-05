@@ -19,7 +19,7 @@ public class Car {
     public Observable<String> brandDeferObservable() {
         return Observable.defer(new Callable<ObservableSource<? extends String>>() {
             @Override
-            public ObservableSource<? extends String> call() {
+            public ObservableSource<? extends String> call() throws Exception {
                 return Observable.just(brand);
             }
         });

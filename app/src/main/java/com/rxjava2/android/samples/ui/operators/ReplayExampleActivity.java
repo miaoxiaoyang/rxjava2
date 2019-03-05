@@ -17,6 +17,7 @@ import io.reactivex.subjects.PublishSubject;
 
 /**
  * Created by amitshekhar on 27/08/16.
+ * 暂时只是知道
  */
 public class ReplayExampleActivity extends AppCompatActivity {
 

@@ -110,10 +110,6 @@ public class OperatorsActivity extends AppCompatActivity {
         startActivity(new Intent(OperatorsActivity.this, ScanExampleActivity.class));
     }
 
-    /**
-     * ============================================================================================================
-     * @param view
-     */
 
     public void startReplayActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, ReplayExampleActivity.class));
@@ -150,6 +146,12 @@ public class OperatorsActivity extends AppCompatActivity {
     public void startBehaviorSubjectActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, BehaviorSubjectExampleActivity.class));
     }
+
+    /**
+     * ============================================================================================================
+     * @param view
+     * 不常用操作符
+     */
 
     public void startAsyncSubjectActivity(View view) {
         startActivity(new Intent(OperatorsActivity.this, AsyncSubjectExampleActivity.class));
